@@ -1,6 +1,16 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# =========================
+# GLOBAL / SYSTEM
+# =========================
+.DS_Store
+.vscode/
+.idea/
+*.pem
 
+# =========================
+# FRONTEND (Next.js / Node)
+# =========================
 # dependencies
+/frontend/node_modules
 /node_modules
 /.pnp
 .pnp.*
@@ -16,13 +26,7 @@
 # next.js
 /.next/
 /out/
-
-# production
 /build
-
-# misc
-.DS_Store
-*.pem
 
 # debug
 npm-debug.log*
@@ -30,12 +34,40 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# =========================
+# BACKEND (Python / FastAPI)
+# =========================
+# virtual environments (Very Important)
+venv/
+env/
+.venv/
 
-# vercel
-.vercel
+# python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# distribution / builds
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# =========================
+# ENVIRONMENT VARIABLES
+# =========================
+# Ignore all .env files in any folder to protect your secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
